@@ -116,10 +116,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>E:\VISION\TP5\GLFW\include;C:\Dev\OpenCV\include;C:\Dev\aruco\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>E:\VISION\TP5\GLFW\lib;C:\Dev\OpenCV\x64\vc16\lib;C:\Dev\aruco\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;opencv_calib3d412d.lib;opencv_core412d.lib;opencv_dnn412d.lib;opencv_features2d412d.lib;opencv_flann412d.lib;opencv_highgui412d.lib;opencv_imgcodecs412d.lib;opencv_imgproc412d.lib;opencv_ml412d.lib;opencv_objdetect412d.lib;opencv_photo412d.lib;opencv_stitching412d.lib;opencv_video412d.lib;opencv_videoio412d.lib;aruco3112.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -139,7 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArUco-OpenGL.cpp" />
     <ClCompile Include="TP5.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArUco-OpenGL.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

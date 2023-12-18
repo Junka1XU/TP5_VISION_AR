@@ -2,10 +2,21 @@
 //
 
 #include <iostream>
+#include <aruco/markerdetector.h>
+
+#include <opencv2/opencv.hpp>
+
+using namespace aruco;
+using namespace cv;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    
+    MarkerDetector myDetector;
+    for (auto m : myDetector.detect(myImage)) {
+    std: : cout << m << std : : endl;
+        m.draw(myImage);
+    }
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
